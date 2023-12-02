@@ -172,7 +172,7 @@ function calcColorDiff(color1, color2) {
     <div class="input-wrapper">
         <input ref="imageFile" type="file" id="inputImage" hidden @change="processImageFile">
         <button class="button" @click="chooseFile()">Choose File</button>
-        <div class="preview-image">
+        <div class="canvas-wrapper">
             <canvas id="canvas" />
         </div>
         <div class="output">
@@ -185,18 +185,14 @@ function calcColorDiff(color1, color2) {
 .input-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 1rem 2rem;
+    margin: 1rem;
 }
 
-.input-wrapper .preview-image {
-    width: 640px;
-    height: 360px;
+.input-wrapper .canvas-wrapper {
+    max-width: 80vw;
+    max-height: 80vh;
+    overflow: auto;
     text-align: center;
-}
-
-.input-wrapper .preview-image canvas {
-    max-width: 640px;
-    max-height: 360px;
 }
 
 .input-wrapper .button {
