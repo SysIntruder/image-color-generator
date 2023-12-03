@@ -37,7 +37,7 @@ function drawOnCanvas(img) {
 }
 
 function quantization(rgbValues, depth) {
-    const MAX_DEPTH = 4
+    const MAX_DEPTH = 6
 
     if (depth === MAX_DEPTH || rgbValues.length === 0) {
         const color = rgbValues.reduce((prev, cur) => {
